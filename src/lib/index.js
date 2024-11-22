@@ -42,7 +42,9 @@ function buildCalculator(context) {
 				return evaluate(l).times(evaluate(r));
 			} else if (op.text === "/") {
 				return evaluate(l).div(evaluate(r));
-			} else if (op.type === "Into") {
+			}  else if (op.text === "%") {
+				return evaluate(l).mod(evaluate(r));
+			}else if (op.type === "Into") {
 				return evaluate(r).div(evaluate(l));
 			} else if (op.type === "From") {
 				return evaluate(r).minus(evaluate(l));
