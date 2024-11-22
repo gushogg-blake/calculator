@@ -15,6 +15,8 @@ let minusKeyState = "init";
 let lastMinusKeyDown = null;
 let enableMinusKeyShortcut = $state(true);
 
+let resultsDiv = $state();
+
 let MINUS_KEY_FROM_MAX_DELAY = 400;
 
 function keydown(e) {
@@ -61,9 +63,17 @@ function go() {
 		value: result,
 	});
 	
-	inputString = result;
+	inputString = result.toString();
 	
 	justGone = true;
+	
+	scroll();
+}
+
+async function scroll() {
+	await tick();
+	
+	resultsDiv.scrollTop = resultsDiv.scrollHeight;
 }
 
 let buttonLabels = {
@@ -219,7 +229,7 @@ button {
 		</div>
 	</div>
 	<div id="calc">
-		<div id="results">
+		<div id="results" bind:this={resultsDiv}>
 			{#each results as {expression, value, name}}
 				<div class="result">
 					<div class="expression">
