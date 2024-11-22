@@ -22,7 +22,7 @@ let MINUS_KEY_FROM_MAX_DELAY = 400;
 function keydown(e) {
 	let {key} = e;
 	
-	if (justGone && key !== "Enter") {
+	if (justGone && clearOnKey(key)) {
 		inputString = "";
 	}
 	
@@ -60,16 +60,29 @@ function keydown(e) {
 }
 
 function go() {
-	let result = calculator(inputString);
+	let result;
+	let origInput = inputString;
+	
+	try {
+		result = calculator(inputString);
+		
+		if (result === undefined) {
+			throw "undefined";
+		}
+		
+		inputString = result?.toString() || "";
+	} catch (e) {
+		console.log(e);
+		
+		result = e === "undefined" ? "(undefined)" : "(error)";
+	}
 	
 	console.log(result);
 	
 	results.push({
-		expression: inputString,
+		expression: origInput,
 		value: result,
 	});
-	
-	inputString = result?.toString() || "";
 	
 	justGone = true;
 	
@@ -95,9 +108,13 @@ let codeMap = {
 	"apo": " apo ",
 };
 
+function clearOnKey(k) {
+	return "1234567890.()".includes(k);
+}
+
 function click(c) {
 	
-	if (justGone && c !== "=") {
+	if (justGone && clearOnKey(c)) {
 		inputString = "";
 	}
 	

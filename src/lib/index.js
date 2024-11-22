@@ -89,6 +89,10 @@ function buildCalculator(context) {
 	return function(str) {
 		let root = buildTree(str);
 		
+		if (root.type === "⚠") {
+			throw new Error("malformed expression: \"" + str + "\"");
+		}
+		
 		let result = evaluate(root);
 		
 		return result;
