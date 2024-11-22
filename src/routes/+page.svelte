@@ -22,6 +22,12 @@ let MINUS_KEY_FROM_MAX_DELAY = 400;
 function keydown(e) {
 	let {key} = e;
 	
+	if (justGone && key !== "Enter") {
+		inputString = "";
+	}
+	
+	justGone = false;
+	
 	if (key === "Enter") {
 		go();
 	}
@@ -63,7 +69,7 @@ function go() {
 		value: result,
 	});
 	
-	inputString = result.toString();
+	inputString = result?.toString() || "";
 	
 	justGone = true;
 	
@@ -90,6 +96,13 @@ let codeMap = {
 };
 
 function click(c) {
+	
+	if (justGone && c !== "=") {
+		inputString = "";
+	}
+	
+	justGone = false;
+	
 	if (c === "C") {
 		inputString = "";
 	} else if (c === "=") {
