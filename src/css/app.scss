@@ -4,6 +4,15 @@ html {
 	--link-color: #004ec5;
 	--color-link: var(--link-color);
 	
+	--scrollbarThumbWidth: 8px;
+	--scrollbarPadding: 3px;
+	--scrollbarWidth: calc(var(--scrollbarThumbWidth) + var(--scrollbarPadding) * 2);
+	--scrollbarBackground: #f5f5f5;
+	--scrollbarBorder: var(--appBorderLight);
+	--scrollbarThumbBorder: var(--scrollbarPadding) solid var(--scrollbarBackground);
+	--scrollbarThumbBackground: #B2B2B2;
+	--scrollbarSpacerBackground: var(--appBackground);
+	
 	font-family: sans-serif, "Merriweather";
 	//font-size: 18px;
 	color: var(--color);
@@ -198,4 +207,26 @@ th {
 
 div:focus {
 	outline: none;
+}
+
+div, form {
+	&::-webkit-scrollbar {
+		width: var(--scrollbarWidth);
+		height: var(--scrollbarWidth);
+	}
+	
+	&::-webkit-scrollbar-thumb {
+		width: var(--scrollbarThumbWidth);
+		height: var(--scrollbarThumbWidth);
+		min-width: 40px;
+		min-height: 40px;
+		border-radius: 8px;
+		border: var(--scrollbarPadding) solid var(--scrollbarBackground);
+		background-clip: content-box;
+		background: var(--scrollbarThumbBackground);
+	}
+	
+	&::-webkit-scrollbar-corner {
+		background: transparent;
+	}
 }

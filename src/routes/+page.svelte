@@ -130,22 +130,34 @@ $effect(function() {
 }
 
 #calc {
-	border-radius: 8px;
 	margin-top: 1em;
+	border: 1px solid #ababab;
+	border-radius: 8px;
 	padding: 1em;
-	background: #e0e0e0;
+	background: #f5f5f5;
 	
 }
 
 
+#results {
+	height: 8em;
+	padding-right: .3em;
+	overflow-y: auto;
+}
+
 .result {
 	display: flex;
+	
+	&:not(:first-child) {
+		margin-top: .4em;
+	}
 }
 
 #input input {
 	
 	font-size: 20px;
 	width: 100%;
+	margin-top: .6em;
 	border: 1px solid #c0c0c0;
 	border-radius: 5px;
 	padding: 12px;
@@ -202,7 +214,7 @@ button {
 	
 	&:active {
 		box-shadow: inset 1px 2px 5px -2px #00000020;
-		background: linear-gradient(0deg, transparent 100%, #00000080 0%);
+		background: linear-gradient(0deg, transparent 0%, #00000010 100%);
 	}
 	
 	&:active div {
@@ -212,11 +224,6 @@ button {
 	}
 	
 	
-}
-
-#results {
-	height: 8em;
-	overflow-y: auto;
 }
 </style>
 
@@ -261,7 +268,7 @@ button {
 			{/each}
 		</div>
 		<div id="input">
-			<input bind:value={inputString} on:keydown={keydown}>
+			<input autofocus bind:value={inputString} on:keydown={keydown}>
 		</div>
 		<div id="keypad">
 			{#each "C ( ) mod apo 7 8 9 div into 4 5 6 - from 1 2 3 x = 0 . _ +".split(" ") as c}
