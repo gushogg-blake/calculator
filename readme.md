@@ -7,8 +7,8 @@ A SvelteKit app for a simple calculator.
 While doing quick calculations I often make use of the previous result still being in the input box, so to add up the numbers from 1-4 for example you can do:
 
 - 1 + 2 \[Enter]
-- + 3 \[Enter]
-- + 4 \[Enter]
+- \+ 3 \[Enter]
+- \+ 4 \[Enter]
 
 This works great for addition and multiplication, and for division and subtraction when the left operand happens to be the one you want. For the other cases, though, you have to clear the input and then type the left operand you want followed by the original result.
 
