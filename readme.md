@@ -2,6 +2,8 @@
 
 A SvelteKit app for a simple calculator.
 
+**WIP** this calculator is still a work in progress. [Contributions](//github.com/gushogg-blake/calculator) welcome!
+
 ## Why?
 
 While doing quick calculations I often make use of the previous result still being in the input box, so to add up the numbers from 1-4 for example you can do:
@@ -20,15 +22,15 @@ Another thing I wanted was "x as a percentage of y" which I realise is just x / 
 
 ## New operators
 
-- Into: type the word `into`, `//`, or `\\`.
+- Into: `into`, `//`, or `\`.
 
 	- `5 into 20` = 4
 
-- From: type the word `from`, `<`, `_`, or `|`.
+- From: `from`, `<`, `_`, or `|`.
 
 	- `5 from 20` = 15
 
-- AsPercentOf: the word `apo`.
+- AsPercentOf: `apo`.
 
 	- `5 apo 20` = 25
 
@@ -39,3 +41,7 @@ Another thing I wanted was "x as a percentage of y" which I realise is just x / 
 	- `4 + 5 + 6 = subtotal`
 	
 	- `subtotal * 2` = 22
+
+## Project structure
+
+See [Project structure](//github.com/gushogg-blake/calculator/blob/main/project-structure.md).

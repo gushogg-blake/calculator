@@ -5,4 +5,10 @@ export default defineConfig({
 	plugins: [
 		sveltekit(),
 	],
+	
+	server: {
+		fs: {
+			allow: ["readme.md"],
+		},
+	},
 });

@@ -26,7 +26,7 @@ UnaryExpression {
 
 BinaryExpression {
 	expression !exp Exp expression
-	| expression !times (ArithOp<"/"> | ArithOp<"*"> | ArithOp<"%"> | Into) expression
+	| expression !times (ArithOp<"/"> | ArithOp<"*"> | Mod | Into) expression
 	| expression !plus (plusMin | From) expression
 	| expression !asPercentOf AsPercentOf expression
 }
@@ -34,6 +34,7 @@ BinaryExpression {
 kw<term> { @specialize[@name={term}]<word, term> }
 
 Exp { "^" | "**" }
+Mod { "%" | kw<"mod"> }
 Into { kw<"into"> | ArithOp<"\\"> | ArithOp<"//"> }
 From { kw<"from"> | ArithOp<"|"> | ArithOp<"<"> | ArithOp<"_"> }
 AsPercentOf { kw<"apo"> | ArithOp<"%%"> }

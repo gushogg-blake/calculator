@@ -7,18 +7,23 @@
 	"scripts": {
 		"dev": "BROWSER=brave-dev vite dev --open",
 		"build": "vite build",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"update-grammar": "lezer-generator src/lib/calc.grammar -o src/lib/parser.js"
 	},
 	"devDependencies": {
 		"@lezer/generator": "^1.7.1",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
+		"mdsvex": "^0.12.3",
+		"remark-wiki-link": "^2.0.1",
 		"sass": "^1.81.0",
 		"svelte": "^5.0.0",
+		"svelte-preprocess": "^6.0.3",
 		"vite": "^5.0.3"
 	},
 	"dependencies": {
-		"bignumber.js": "^9.1.2"
+		"bignumber.js": "^9.1.2",
+		"slugify": "^1.6.6"
 	}
 }

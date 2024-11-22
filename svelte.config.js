@@ -1,7 +1,41 @@
 import path from "path";
 import adapter from "@sveltejs/adapter-auto";
+import preprocess from "svelte-preprocess";
+import {mdsvex} from "mdsvex";
+import remarkWikiLink from "remark-wiki-link";
+import slugify from "slugify";
 
 export default {
+	extensions: [".svelte", ".md"],
+	
+	preprocess: [
+		preprocess({
+			scss: {
+				includePaths: ["src/routes", "src/css"],
+			},
+		}),
+		
+		mdsvex({
+			extensions: [".md", ".svx"],
+			
+			smartypants: {
+				dashes: "oldschool",
+			},
+			
+			remarkPlugins: [
+				[remarkWikiLink, {
+					pageResolver(name) {
+						return [slugify(name).toLowerCase()];
+					},
+					
+					hrefTemplate(permalink) {
+						return `/${permalink}`;
+					},
+				}],
+			],
+		}),
+	],
+	
 	kit: {
 		adapter: adapter(),
 		

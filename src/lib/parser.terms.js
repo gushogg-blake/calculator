@@ -7,9 +7,11 @@ export const
   UnaryExpression = 5,
   BinaryExpression = 7,
   Exp = 8,
-  Into = 12,
-  into = 13,
-  From = 16,
-  from = 17,
-  AsPercentOf = 21,
-  apo = 22
+  Mod = 11,
+  mod = 12,
+  Into = 13,
+  into = 14,
+  From = 17,
+  from = 18,
+  AsPercentOf = 22,
+  apo = 23
