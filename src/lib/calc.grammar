@@ -1,0 +1,69 @@
+@precedence {
+	prefix,
+	exp @left,
+	times @left,
+	plus @left,
+	asPercentOf @left,
+	assign
+}
+
+@top program { Assignment | expression }
+
+expression {
+	Number
+	| VariableName
+	| UnaryExpression
+	| parenthesizedExpression
+	| BinaryExpression
+}
+
+parenthesizedExpression { "(" expression ")" }
+
+UnaryExpression {
+	!prefix plusMin
+	expression
+}
+
+BinaryExpression {
+	expression !exp Exp expression
+	| expression !times (ArithOp<"/"> | ArithOp<"*"> | ArithOp<"%"> | Into) expression
+	| expression !plus (plusMin | From) expression
+	| expression !asPercentOf AsPercentOf expression
+}
+
+kw<term> { @specialize[@name={term}]<word, term> }
+
+Exp { "^" | "**" }
+Into { kw<"into"> | ArithOp<"\\"> | ArithOp<"//"> }
+From { kw<"from"> | ArithOp<"|"> | ArithOp<"<"> | ArithOp<"_"> }
+AsPercentOf { kw<"apo"> | ArithOp<"%%"> }
+
+Assignment {
+	expression Equals<"="> VariableName
+	| VariableName Equals<":"> expression
+}
+
+Equals<expr> { expr }
+
+VariableName { identifier }
+
+plusMin { ArithOp<"+" | "-"> }
+
+@skip { spaces | newline }
+
+@tokens {
+	spaces { " "+ }
+	newline { $[\r\n] }
+	
+	identifierChar { @asciiLetter }
+
+	word { identifierChar identifierChar* }
+
+	identifier { word }
+
+	Number {
+		(@digit @digit* ("." @digit*)?) (("e" | "E") ("+" | "-")? @digit+)?
+	}
+
+	ArithOp<expr> { expr }
+}

@@ -1,0 +1,201 @@
+html {
+	--code-height: 30em;
+	--color: #444444;
+	--link-color: #004ec5;
+	--color-link: var(--link-color);
+	
+	font-family: sans-serif, "Merriweather";
+	//font-size: 18px;
+	color: var(--color);
+}
+
+hr {
+	border-style: solid;
+}
+
+.imageCaption {
+	font-weight: bold;
+	text-align: center;
+	font-size: .8em;
+}
+
+body {
+	margin: 0;
+}
+
+div, input, form {
+	box-sizing: border-box;
+}
+
+h1, h2, h3 {
+	//a {
+	//	color: inherit;
+	//	text-decoration: none;
+	//}
+}
+
+h1 a {
+	
+}
+
+h1 {
+	text-align: center;
+	//font-weight: normal;
+}
+
+h1, h2 {
+	margin-top: 1em;
+	margin-bottom: .8em;
+	
+	&:first-of-type {
+		margin-top: .6em;
+	}
+}
+
+h2 {
+	text-align: center;
+	font-size: 1.3em;
+}
+
+h1, h2, h3 {
+	&:first-child {
+		//margin-top: 0;
+	}
+}
+
+p {
+	//letter-spacing: 0.1px;
+	line-height: 1.5;
+}
+
+li p {
+	line-height: 1.25;
+}
+
+a {
+	color: var(--link-color);
+	
+	&:hover {
+		#title, .title {
+			//text-decoration: underline;
+		}
+	}
+}
+
+.note, .disc {
+	padding: 1em;
+	
+	> p:first-child {
+		margin-top: 0;
+	}
+	
+	> p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+div.note {
+	border: 1px solid #bfbfbf;
+	background: #fafafa;
+}
+
+.disc {
+	background: #edf7ff;
+}
+
+pre {
+	line-height: 1 !important;
+	border: 1px solid #bfbfbf;
+	background-clip: padding-box;
+	
+	&:not([class*="noscroll"]) {
+		max-height: var(--code-height);
+	}
+}
+
+code {
+	font-size: 15px;
+	border: 1px solid #bfbfbf;
+	border-radius: 3px;
+	padding: 3px 6px 2px 6px;
+	background: #fafafa;
+}
+
+pre code {
+	font-size: 14px;
+	border: none;
+	padding: 0;
+	background: transparent;
+}
+
+.language-plaintext, .language-undefined {
+	white-space: pre-line !important;
+}
+
+pre, code {
+	&[class*="quote"] {
+		white-space: pre-line !important;
+		font-family: inherit !important;
+		font-size: inherit !important;
+	}
+}
+
+blockquote {
+	font-size: .95em;
+	margin: 0;
+	margin-left: 8px;
+	border-left: 2px solid #808080;
+	//border-radius: 2px;
+	padding: 8px .8em;
+	background: #00000005;
+	
+	p:first-child {
+		margin-top: 0;
+	}
+	
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+$tableBorder: 1px solid #bbbbbb;
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td, th {
+	border: $tableBorder;
+}
+
+td {
+	border: $tableBorder;
+	padding: 12px;
+}
+
+td, .paras {
+	p, ol, ul {
+		&:first-child {
+			margin-top: 0;
+		}
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+td {
+	vertical-align: middle;
+}
+
+th {
+	text-align: left;
+	padding: 8px 12px;
+	//background: #f0f0f0;
+}
+
+div:focus {
+	outline: none;
+}
