@@ -41,7 +41,3 @@ Another thing I wanted was "x as a percentage of y" which I realise is just x / 
 	- `4 + 5 + 6 = subtotal`
 	
 	- `subtotal * 2` = 22
-
-## Project structure
-
-See [Project structure](//github.com/gushogg-blake/calculator/blob/main/project-structure.md).

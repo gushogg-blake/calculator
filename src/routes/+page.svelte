@@ -134,6 +134,8 @@ $effect(function() {
 });
 </script>
 
+<!--<svelte:window on:keydown={windowKeydown}/>-->
+
 <style lang="scss">
 .col {
 	width: 600px;
