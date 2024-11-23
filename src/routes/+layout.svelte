@@ -11,6 +11,10 @@ import {onMount, setContext, getContext, createEventDispatcher, tick} from "svel
 }
 </style>
 
+<svelte:head>
+	<title>Fluent Calculator</title>
+</svelte:head>
+
 <div id="main">
 	<slot/>
 </div>
