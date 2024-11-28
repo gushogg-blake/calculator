@@ -63,7 +63,7 @@ plusMin { ArithOp<"+" | "-"> }
 	identifier { word }
 
 	Number {
-		(@digit @digit* ("." @digit*)?) (("e" | "E") ("+" | "-")? @digit+)?
+		((@digit+ ("." @digit*)?) | "." @digit+) (("e" | "E") ("+" | "-")? @digit+)?
 	}
 
 	ArithOp<expr> { expr }

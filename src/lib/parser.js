@@ -10,7 +10,7 @@ export const parser = LRParser.deserialize({
   maxTerm: 41,
   skippedNodes: [0],
   repeatNodeCount: 0,
-  tokenData: "&T~RdYZ!a]^!apq!fuv!nxy!{yz#Qz{#V{|#d}!O#d!P!Q#i!Q![#v![!]%R!^!_%W!_!`%]!c!}%b#O#P%o#Q#R%t#R#S%y#T#o%b#p#q&O~!fOn~~!kPm~pq!f~!sPv~uv!v~!{Oh~~#QOr~~#VOs~~#[PY~z{#_~#dOu~~#iOU~~#nPX~!P!Q#q~#vO`~~#{SR~!O!P$X!Q![#v!g!h$g#X#Y$g~$^RR~!Q![$X!g!h$g#X#Y$g~$jR{|$s}!O$s!Q![$y~$vP!Q![$y~%OPR~!Q![$y~%WOy~~%]Od~~%bOx~R%iQpPwQ!c!}%b#T#o%b~%tO_~~%yOt~~&OOe~~&TOc~",
+  tokenData: "&^~ReYZ!d]^!dpq!iuv!qxy#Oyz#Tz{#Y{|#g}!O#g!O!P#l!P!Q$l!Q![$y![!]%[!^!_%a!_!`%f!c!}%k#O#P%x#Q#R%}#R#S&S#T#o%k#p#q&X~!iOn~~!nPm~pq!i~!vPv~uv!y~#OOh~~#TOr~~#YOs~~#_PY~z{#b~#gOu~~#lOU~~#oP!Q![#r~#wRR~!Q![#r!g!h$Q#X#Y$Q~$TR{|$^}!O$^!Q![$d~$aP!Q![$d~$iPR~!Q![$d~$qPX~!P!Q$t~$yO`~~%OSR~!O!P#r!Q![$y!g!h$Q#X#Y$Q~%aOy~~%fOd~~%kOx~R%rQpPwQ!c!}%k#T#o%k~%}O_~~&SOt~~&XOe~~&^Oc~",
   tokenizers: [0, 1],
   topRules: {"program":[0,1]},
   specialized: [{term: 39, get: (value) => spec_word[value] || -1}],
