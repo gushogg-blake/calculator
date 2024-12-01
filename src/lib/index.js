@@ -49,7 +49,7 @@ function buildCalculator(context) {
 			} else if (op.type === "From") {
 				return evaluate(r).minus(evaluate(l));
 			} else if (op.type === "AsPercentOf") {
-				return evaluate(l).div(evaluate(r)).times(100);
+				return evaluate(l).div(evaluate(r));
 			} else if (op.type === "Exp") {
 				return evaluate(l).pow(evaluate(r));
 			}
