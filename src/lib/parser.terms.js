@@ -13,5 +13,5 @@ export const
   into = 14,
   From = 17,
   from = 18,
-  AsPercentOf = 22,
+  AsProportionOf = 22,
   apo = 23

@@ -6,7 +6,7 @@ export const parser = LRParser.deserialize({
   states: "$zOYQPOOOOQO'#C`'#C`OYQPO'#C}Q!lQQO'#C^OOQO'#C{'#C{O!sQQO'#C{QOQPOOOYQPO'#CaO$QQQO,59iOOQO'#Cd'#CdOOQO'#Cg'#CgOOQO'#Ci'#CiOOQO'#Cm'#CmOOQO'#Cr'#CrOYQPO,58}OYQPO,58}OYQPO,58}OYQPO,58}OOQO'#Cu'#CuO$XQPO,58xOOQO'#Cv'#CvOYQPO,58xOOQO,58{,58{OOQO1G/T1G/TOOQO1G.i1G.iO%UQQO1G.iO%oQQO1G.iO'WQQO1G.iOOQO1G.d1G.dO'kQQO1G.d",
   stateData: "'r~OmOSnOS~ORSOUVOpPOrQO~OU`OX_OY_O[YO^ZO_ZO`ZOb[Oc[Od[Oe[Og]Oh]OtXOuXOvYO~OxbO~PhOydOUoXXoXYoX[oX^oX_oX`oXboXcoXdoXeoXgoXhoXkoXtoXuoXvoXxoX~OsgO~PhOpPO~OtXOuXOUVibVicVidVieVigVihVikVixVisVi~OXViYVi[Vi^Vi_Vi`VivVi~P$^OX_OY_O[YO^ZO_ZO`ZOvYO~P$^OU`OX_OY_O[YO^ZO_ZO`ZOb[Oc[Od[Oe[OtXOuXOvYO~OgVihVikVixVisVi~P&YOkQi~PhO",
   goto: "#krPPsPv!VP!V!aPP!iP!iPPP!pPPPP!vPP!{#OPPPP#RP!VRUO^SQV^_`aeQTORlcaSOQV^_`ae]^RWijkmZ_RWjkmX`RWkmVaRWmRcRReTQROQWQQfVQh^Qi_Qj`QkaRme",
-  nodeNames: "⚠ program Assignment Number VariableName UnaryExpression ArithOp BinaryExpression Exp ArithOp ArithOp Mod mod Into into ArithOp ArithOp From from ArithOp ArithOp ArithOp AsPercentOf apo ArithOp Equals Equals",
+  nodeNames: "⚠ program Assignment Number VariableName UnaryExpression ArithOp BinaryExpression Exp ArithOp ArithOp Mod mod Into into ArithOp ArithOp From from ArithOp ArithOp ArithOp AsProportionOf apo ArithOp Equals Equals",
   maxTerm: 41,
   skippedNodes: [0],
   repeatNodeCount: 0,

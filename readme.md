@@ -18,7 +18,7 @@ This gave me the idea to create two new operators, "into" and "from", which are 
 
 This allows for fluent building on previous results regardless of the order.
 
-Another thing I wanted was "x as a percentage of y" which I realise is just x / y times 100, but it's still nice to have it built in.
+Another thing I wanted was "x as a proportion of y" which I realise is just x / y, but it's still nice to have it built in as a separate concept.
 
 ## New operators
 
@@ -30,9 +30,9 @@ Another thing I wanted was "x as a percentage of y" which I realise is just x / 
 
 	- `5 from 20` = 15
 
-- AsPercentOf: `apo`.
+- AsProportionOf: `apo`.
 
-	- `5 apo 20` = 25
+	- `5 apo 20` = 0.25
 
 - Assignment: type _expression_ = _name_ or _name_: _expression_ to store the value of _expression_ as _name_ for later use:
 
