@@ -30,7 +30,7 @@ Another thing I wanted was "x as a proportion of y" which I realise is just x / 
 
 	- `5 from 20` = 15
 
-- AsProportionOf: `apo`.
+- AsProportionOf: `apo` or `%%`.
 
 	- `5 apo 20` = 0.25
 
